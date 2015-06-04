@@ -1,9 +1,14 @@
-<header class="site-header">
+<header class="site-header" 
+  {%if page.img %}
+  style="background:url({{page.img}}) fixed no-repeat;background-size:100%;">
+  {%else%}
+  style="background:url(/img/header_homepage_13.jpg) fixed no-repeat;background-size:100%;">
+  {%endif%}
 
   <div class="wrapper">
-
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
+    <!-- Page list and button -->
     <nav class="site-nav">
       <a href="#" class="menu-icon">
         <svg viewBox="0 0 18 15">

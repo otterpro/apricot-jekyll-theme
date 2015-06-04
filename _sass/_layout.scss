@@ -1,13 +1,24 @@
+/* temp debugging */
+.site-nav {background-color:gold;}
+.site-footer {background-color:gainsboro;}
+.post-content {background-color:thistle;}
+.post{background-color:powderblue;}
+.post-header {background-color:peru;}
+
+
 /**
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    //border-top: 5px solid $grey-color-dark;
+    //border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
+
+	// Added to increase height so that background image could fit
+	height:250px;
 }
 
 .site-title {
@@ -16,11 +27,17 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+	color: white;	// Title color: WHITE for now
 
     &,
     &:visited {
-        color: $grey-color-dark;
+        color: white;
+
     }
+
+	//* TEXT SHADOW to highlight the title against the background image
+	text-shadow: 2px 2px 8px black,
+				 -2px -2px 8px black;
 }
 
 .site-nav {
