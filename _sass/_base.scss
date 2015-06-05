@@ -188,8 +188,9 @@ pre {
 
 /**
  * Icons
+ Renamed from .icon to .social-icon
  */
-.icon {
+.social-icon {
 
     > svg {
         display: inline-block;
@@ -198,7 +199,7 @@ pre {
         vertical-align: middle;
 
         path {
-            fill: $grey-color;
+            fill: $social-icon-color;
         }
     }
 }

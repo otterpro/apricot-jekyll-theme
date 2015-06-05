@@ -152,6 +152,14 @@
     width:         calc(45% - (#{$spacing-unit} / 2));
 }
 
+// ** (c)Copyright 2015 message and Powered by Jekyll | URL
+.footer-last-line {
+    font-size: 15px;
+	background-color: $grey-color-dark;
+    color: $grey-color;
+	text-align: center;
+}
+
 @include media-query($on-laptop) {
     .footer-col-1,
     .footer-col-2 {

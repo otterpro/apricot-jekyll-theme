@@ -1,0 +1,29 @@
+---
+title: Archives
+permalink: archive/
+---
+
+{% comment %}
+part of code is from http://stackoverflow.com/a/20777475/1673809
+{% endcomment %}
+
+{% if site.posts != empty %}
+    {% for post in site.posts %}
+    {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
+    {% if currentyear != year %}
+        {% unless forloop.first %}</ul>
+        {% endunless %}
+        <h1>{{ currentyear }}</h1>
+        <ul> {% capture year %}{{currentyear}}{% endcapture %}{% endif %}
+          <li>
+        {% comment %} Optional : show dates
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}"> {{ post.date | date:"%m-%d" }} </time>
+        {% endcomment %}
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title | capitalize }}</a></li>
+    {% endfor %}
+{% else %}
+
+<span>No Posts</span>
+
+{% endif %}
+
