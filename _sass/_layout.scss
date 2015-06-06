@@ -1,21 +1,28 @@
 /* temp debugging */
 .site-nav {background-color:gold;}
 .site-header {background-color:purple;}
-.site-footer {background-color:gainsboro;}
+.site-footer {background-color:purple;}
 .post-content {background-color:thistle;}
 .post{background-color:powderblue;}
 .post-header {background-color:peru;}
+// aside {background-color: red; }
+#sidebar {background-color: red;}
+.responsive-wrapper {background-color: black;}
+.content {background-color: orange;}
+
 
 /* wraps around main area, including content and sidebar */
 /* responsive */
 .responsive-wrapper { width: 100%; margin: 0 auto; }
 .content { width: 100%; } 
-aside { width: 100%;}
+// #sidebar { width: 100%;}
+// aside { width: 100%;margin-right: 2%;}
+.sidebar { width: 100%;margin-right: 2%;}
 
 // @include media-query($on-palm) {
 @media screen and (min-width: $on-palm) {
-.responsive-wrapper { width: 80%; margin: 0 auto; }
-.content { width: 67%; } 
-aside { width: 31%; margin-right: 2%; }
+	.responsive-wrapper { width: 80%; margin: 0 auto; }
+	.content { width: 66%; float:left; } 
+	#sidebar{ width: 31%; float:left;margin-right: 2%; }
 }
 
