@@ -1,11 +1,15 @@
-<header class="site-header" 
-  {%if page.img %}
-  style="background:url({{page.img}}) fixed no-repeat;background-size:100%;">
-  {%else%}
-  style="background:url(/img/header_homepage_13.jpg) fixed no-repeat;background-size:100%;">
-  {%endif%}
+<!-- Header Image  -->
+{%if page.img %}
+  {% assign header_image= page.img %}
+{%else%}
+  {% assign header_image = "/img/header_homepage_13.jpg" %}
+{%endif%}
+
+<header class="site-header" style="background:url({{header_image}}) no-repeat fixed; background-size:100%;">
 
   <div class="wrapper">
+
+  <!-- Header Title -->
     <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
     <!-- Page list and button -->
