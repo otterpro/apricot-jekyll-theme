@@ -9,6 +9,7 @@
 #sidebar {background-color: red;}
 .responsive-wrapper {background-color: black;}
 .content {background-color: orange;}
+.pagination {background-color: lightgreen;}
 
 
 /* wraps around main area, including content and sidebar */
@@ -21,8 +22,45 @@
 
 // @include media-query($on-palm) {
 @media screen and (min-width: $on-palm) {
-	.responsive-wrapper { width: 80%; margin: 0 auto; }
-	.content { width: 66%; float:left; } 
-	#sidebar{ width: 31%; float:left;margin-right: 2%; }
+	.responsive-wrapper { width: 90%; margin: 0 auto; }
+	.content { width: 80%; float:left; } 
+	#sidebar{ width: 18%; float:left;margin-right: 2%; }
 }
+
+
+/**
+ * Wrapper - Original Jekyll wrapper
+ */
+.wrapper {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+    @extend %clearfix;
+
+    @include media-query($on-laptop) {
+        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        padding-right: $spacing-unit / 2;
+        padding-left: $spacing-unit / 2;
+    }
+}
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
 

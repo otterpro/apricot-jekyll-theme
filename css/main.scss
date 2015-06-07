@@ -17,18 +17,19 @@ $background-color: #fdfdfd;
 // $background-color: #f00;
 $brand-color:      #2a7ae2;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+// use Gray, LightGray, DarkGray instead
+// $grey-color:       #828282;
+// $grey-color-light: lighten($grey-color, 40%);
+// $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
+$content-width:   1024px;// 800px;
 
-$on-palm:          600px;
-$on-laptop:        800px;
+$on-palm:          640px;
+$on-laptop:        1024px;//800px;
 
 // Twitter, Github, RSS icons (inline SVG)
-$social-icon-color: #828282; 
+$social-icon-color: Gray; 
 
 // Using media queries with like this:
 // @include media-query($on-palm) {
