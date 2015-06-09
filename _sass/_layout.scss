@@ -1,15 +1,3 @@
-/* temp debugging */
-.site-nav {background-color:gold;}
-.site-header {background-color:purple;}
-.site-footer {background-color:purple;}
-.post-content {background-color:thistle;}
-.post{background-color:powderblue;}
-.post-header {background-color:peru;}
-// aside {background-color: red; }
-#sidebar {background-color: red;}
-.responsive-wrapper {background-color: black;}
-.content {background-color: orange;}
-.pagination {background-color: lightgreen;}
 
 
 /* wraps around main area, including content and sidebar */
@@ -18,18 +6,24 @@
 .content { width: 100%; } 
 // #sidebar { width: 100%;}
 // aside { width: 100%;margin-right: 2%;}
-.sidebar { width: 100%;margin-right: 2%;}
+// aside { width: 100% ; margin: 0;}
+aside { box-sizing: border-box; margin: 0; padding:10px;}
+// .sidebar { width: 100%;}
 
 // @include media-query($on-palm) {
 @media screen and (min-width: $on-palm) {
-	.responsive-wrapper { width: 90%; margin: 0 auto; }
-	.content { width: 80%; float:left; } 
-	#sidebar{ width: 18%; float:left;margin-right: 2%; }
+	.responsive-wrapper { width: 100%; margin: 0 auto; }
+	.content { width: $content-percent; float:left; } 
+	// #sidebar{ width: 18%; float:left;margin-right: 2%; }
+	aside { width: $sidebar-percent; float:left;}
 }
 
 
 /**
  * Wrapper - Original Jekyll wrapper
+	Useful for main content wrapper
+	* has significant left,right margin 
+
  */
 .wrapper {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
@@ -40,6 +34,7 @@
     padding-left: $spacing-unit;
     @extend %clearfix;
 
+	/* mobile and small screen */
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));

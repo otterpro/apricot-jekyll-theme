@@ -14,6 +14,10 @@ github_username:  jekyll
 # permalink is set to /title/, as it works best with NVTool
 permalink: /:title/
 
+#jekyll server setting (optional)
+# port: 80
+host: 0.0.0.0
+
 # pagination
 paginate: 2
 paginate_path: "/index:num/"

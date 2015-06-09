@@ -8,7 +8,10 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
+/* enable sane box model */
+/* https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
 
 /**
  * Basic styling

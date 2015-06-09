@@ -25,6 +25,9 @@ $brand-color:      #2a7ae2;
 // Width of the content area
 $content-width:   1024px;// 800px;
 
+$content-percent: 80%;
+$sidebar-percent: 20%;
+
 $on-palm:          640px;
 $on-laptop:        1024px;//800px;
 
@@ -45,6 +48,18 @@ $social-icon-color: Gray;
 }
 
 
+/* temp debugging */
+// .site-nav {background-color:gold;}
+// .site-header {background-color:purple;}
+// .site-footer {background-color:purple;}
+// .post-content {background-color:thistle;}
+// .post{background-color:powderblue;}
+// .post-header {background-color:peru;}
+// aside {background-color: red; }
+// // #sidebar {background-color: red;}
+// .responsive-wrapper {background-color: black;}
+// .content {background-color: orange;}
+// .pagination {background-color: lightgreen;}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "base";
