@@ -1,13 +1,19 @@
 ---
 layout: default
 ---
-
-{% include test.html %}
 <div class="post">
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+
+    {% comment %}
+    Convert page var to post
+    since post-meta expects post, not page variable
+    {% endcomment %}
+
+    {% assign post= page %}
+
+    {%include post-meta.html %}
   </header>
 
   <article class="post-content">

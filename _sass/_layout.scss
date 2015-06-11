@@ -3,21 +3,27 @@
 /* wraps around main area, including content and sidebar */
 /* responsive */
 .responsive-wrapper { width: 100%; margin: 0 auto; }
-.content { width: 100%; } 
+.main-column { width: 100%; padding: 20px; } 
 // #sidebar { width: 100%;}
 // aside { width: 100%;margin-right: 2%;}
 // aside { width: 100% ; margin: 0;}
-aside { box-sizing: border-box; margin: 0; padding:10px;}
+aside { box-sizing: border-box; margin: 0; padding:20px;}
 // .sidebar { width: 100%;}
 
 // @include media-query($on-palm) {
 @media screen and (min-width: $on-palm) {
 	.responsive-wrapper { width: 100%; margin: 0 auto; }
-	.content { width: $content-percent; float:left; } 
+	.main-column { width: $content-percent; float:left; } 
 	// #sidebar{ width: 18%; float:left;margin-right: 2%; }
 	aside { width: $sidebar-percent; float:left;}
 }
 
+// Tag Detail page contains multi-column
+.tag-detail {
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+}
 
 /**
  * Wrapper - Original Jekyll wrapper

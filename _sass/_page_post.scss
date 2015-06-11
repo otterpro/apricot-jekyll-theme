@@ -4,7 +4,7 @@
 
 /* content area, main text */
 .content {
-    padding: $spacing-unit 0;
+    // padding: $spacing-unit 0;
 }
 
 
@@ -26,6 +26,7 @@
     font-size: 24px;
 }
 
+// Date, Author, Tags in post
 .post-meta {
     font-size: $small-font-size;
     color: Gray;
@@ -45,32 +46,32 @@
         font-size: 36px;
     }
 }
-
-.post-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
-}
-
+/* NOT USED??? */
+// .post-content {
+//     margin-bottom: $spacing-unit;
+//
+//     h2 {
+//         font-size: 32px;
+//
+//         @include media-query($on-laptop) {
+//             font-size: 28px;
+//         }
+//     }
+//
+//     h3 {
+//         font-size: 26px;
+//
+//         @include media-query($on-laptop) {
+//             font-size: 22px;
+//         }
+//     }
+//
+//     h4 {
+//         font-size: 20px;
+//
+//         @include media-query($on-laptop) {
+//             font-size: 18px;
+//         }
+//     }
+// }
+//

@@ -1,0 +1,19 @@
+---
+layout: null
+sitemap:
+  exclude: true
+# modified from http://davidensinger.com/2013/11/building-a-better-sitemap-xml-with-jekyll/
+# default changefreq: monthly
+# default priority: 0.5
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<!-- Posts -->
+	{% for post in site.posts %}
+	{% include sitemap.html %}
+	{% endfor %}
+	<!-- Pages -->
+	{% for post in site.pages %}
+	{% include sitemap.html %}
+	{% endfor %}
+</urlset>

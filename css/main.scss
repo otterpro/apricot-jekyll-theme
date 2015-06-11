@@ -25,8 +25,8 @@ $brand-color:      #2a7ae2;
 // Width of the content area
 $content-width:   1024px;// 800px;
 
-$content-percent: 80%;
-$sidebar-percent: 20%;
+$content-percent: 70%;
+$sidebar-percent: 30%;
 
 $on-palm:          640px;
 $on-laptop:        1024px;//800px;
@@ -46,7 +46,6 @@ $social-icon-color: Gray;
         @content;
     }
 }
-
 
 /* temp debugging */
 // .site-nav {background-color:gold;}
@@ -68,3 +67,4 @@ $social-icon-color: Gray;
 @import "header";
 @import "footer";
 @import "page_post";
+@import "pagination";

@@ -1,4 +1,4 @@
-<div class="pagination wrapper">
+<!-- <div class="pagination wrapper"> -->
 
   {% comment %}
   <!-- Code based on http://jekyllrb.com/docs/pagination/ -->
@@ -8,12 +8,12 @@
     {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
     {% else %}
-    <span>&laquo; Prev</span>
+    <span class="disabled_link">&laquo; Prev</span>
     {% endif %}
 
     {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
-    <strong>{{ page }}</strong>
+    <strong class="disabled_link">{{ page }}</strong>
     {% elsif page == 1 %}
     <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
     {% else %}
@@ -24,9 +24,9 @@
     {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
     {% else %}
-    <span>Next &raquo;</span>
+    <span class="disabled_link">Next &raquo;</span>
     {% endif %}
   </div>
   {% endif %}
 
-</div>
+<!-- </div> -->

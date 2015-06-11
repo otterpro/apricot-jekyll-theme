@@ -1,0 +1,52 @@
+---
+permalink: /tags/
+# show categories and tags in single page
+# heavily modified version of tag page from https://github.com/yulijia/freshman21/
+# MAYBE: split into 2 pages, (cats, tags)
+---
+<h1>Categories</h1>
+<div class="tag-detail">
+<ul >
+  
+{% for tag in site.categories %}
+<a href="#{{ tag[0] }}" title="{{ tag[0] }}" >
+  {{ tag[0] }}({{ tag[1].size }})</a>
+{% endfor %}
+</ul>
+
+<ul class="tags-box">
+{% for tag in site.categories %}
+<li  id="{{ tag[0] }}">{{ tag[0] }}</li>
+{% for post in tag[1] %}
+
+<a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><br />
+{% endfor %}
+{% endfor %}
+</ul>
+</div>
+<h1>Tags</h1>
+<div class="tag-detail">
+<ul >
+{% for tag in site.tags %}
+<a href="#{{ tag[0] }}" title="{{ tag[0] }}" >
+  {{ tag[0] }}({{ tag[1].size }})</a>
+{% endfor %}
+</ul>
+
+<ul >
+{% for tag in site.tags %}
+<li  id="{{ tag[0] }}">{{ tag[0] }}</li>
+{% for post in tag[1] %}
+
+{% comment %}
+<time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time> &raquo;
+{% endcomment %}
+
+<a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><br />
+{% endfor %}
+{% endfor %}
+</ul>
+</div>
+
+
+

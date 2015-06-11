@@ -1,3 +1,6 @@
+# [Jekyll Table of Contents Generator]
+# (https://github.com/dafi/jekyll-toc-generator)
+#
 require 'nokogiri'
 
 module Jekyll

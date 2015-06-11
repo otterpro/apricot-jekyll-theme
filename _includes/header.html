@@ -24,9 +24,20 @@
 
       <div class="trigger">
         {% for page in site.pages %}
+        {% if page.show_in_menu  %}
+          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">
           {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+            {{ page.title }}
+          {% else %}
+
+          <!-- transform page URL into readable title. post.title is generated
+          by jekyll but page.title isn't.-->
+
+          {{ page.url | remove:'/' | replace:'-',' ' | remove_first:'.html' || capitalize}}
           {% endif %}
+          </a>
+
+        {% endif %}
         {% endfor %}
       </div>
     </nav>

@@ -1,8 +1,75 @@
 <aside >
 <!-- <div class="wrapper"> -->
-    Sidebar
-    <br/>
-    Line1
+
+  <!-- Introduction -->
+{{ site.description }}
+
+
+{% if site.posts != empty %}
+<h3>Latest Posts</h3>
+<ul> 
+    {% for post in site.posts limit:5 %}
+          <li>
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title | capitalize }}</a>
+          </li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+<!-- Categories -->
+<!--loosely based on http://www.jokecamp.com/blog/listing-jekyll-posts-by-tag/ -->
+<h3>Categories</h3>
+
+{% for cat in site.categories %}
+{% assign c = cat | first %}
+{% assign posts = cat | last %}
+
+<a href="{{site.url}}tags/#{{c}}">{{ c | downcase }}</a>
+<ul>
+  {% for post in posts %}
+  {% if post.categories contains c %}
+  <li>
+  <a href="{{ post.url }}">{{ post.title }}</a>
+
+  {% comment %}
+  <span class="date">{{ post.date | date: "%B %-d, %Y"  }}</span>
+  {% endcomment %}
+
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
+{% endfor %}
+
+<!-- Tags -->
+<!-- TODO: currently showing pages. Show both pages and posts -->
+
+<h3>Tags</h3>
+
+
+<!--modified from http://www.jokecamp.com/blog/listing-jekyll-posts-by-tag/ -->
+{% for tag in site.tags %}
+{% assign t = tag | first %} <!-- extract tag from tag struct, ie tag[0] -->
+{% assign posts = tag | last %}
+
+<a href="{{site.url}}tags/#{{t}}">{{ t | downcase }}</a>
+<ul>
+  {% for post in posts %}
+  {% if post.tags contains t %}
+  <li>
+  <a href="{{ post.url }}">{{ post.title }}</a>
+
+  {% comment %}  Hide the date for now
+  <span class="date">{{ post.date | date: "%B %-d, %Y"  }}</span>
+  {% endcomment %}
+
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul>
+{% endfor %}
+
+    
 
   <!-- </div> -->
   </aside>
