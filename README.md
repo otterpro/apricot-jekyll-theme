@@ -43,6 +43,8 @@ TODO
 =======
 In _config.yml
 
+* favicon
+
 * enable certain tags/categories (and their posts) to be displayed on the sidebar
     sidebar_categories: project
     sidebar_tags: important, linux, jekyll

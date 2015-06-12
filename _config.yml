@@ -2,7 +2,7 @@
 title: otter.pro
 email: dan@otter.pro
 description: > # this means to ignore newlines until "baseurl:"
-Hi, I'm Daniel D Kim and I'm a software developer in the Bay Area.
+  Hi, I'm Daniel D Kim and I'm a software developer in the Bay Area.
 baseurl: "" # the subpath of your site, e.g. /blog/
 #url: "http://yourdomain.com" # the base hostname & protocol for your site
 url: "" # the base hostname & protocol for your site
@@ -11,6 +11,10 @@ github_username:  otterpro
 
 # permalink is set to /title/, as it works best with NVTool
 permalink: /:title/
+
+#TODO: uncomment these on production
+#sass:
+#    style: :compressed
 
 #jekyll server setting (optional)
 # port: 80
@@ -45,4 +49,7 @@ contentsLabel: "Table of Contents"
 minItemsToShowToc: 2
 
 # Custom Vars for Apricot Theme
-#
+
+# TODO: maybe?
+#number_of_column: 1 
+# either 1 or 2 at this time. Default: 1

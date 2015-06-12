@@ -1,19 +1,18 @@
 
-
 /* wraps around main area, including content and sidebar */
 /* responsive */
-.responsive-wrapper { width: 100%; margin: 0 auto; }
-.main-column { width: 100%; padding: 20px; } 
 // #sidebar { width: 100%;}
 // aside { width: 100%;margin-right: 2%;}
 // aside { width: 100% ; margin: 0;}
-aside { box-sizing: border-box; margin: 0; padding:20px;}
 // .sidebar { width: 100%;}
+.responsive-2col { width: 100%; margin: 0 auto; }
+.main-column { width: 100%; padding: 20px; } 
+aside { box-sizing: border-box; margin: 0; padding:20px;}
 
 // @include media-query($on-palm) {
 @media screen and (min-width: $on-palm) {
-	.responsive-wrapper { width: 100%; margin: 0 auto; }
-	.main-column { width: $content-percent; float:left; } 
+	.two-col-main { width: $content-percent; float:left; } 
+	// .main-column { width: $content-percent; float:left; } 
 	// #sidebar{ width: 18%; float:left;margin-right: 2%; }
 	aside { width: $sidebar-percent; float:left;}
 }
@@ -26,6 +25,8 @@ aside { box-sizing: border-box; margin: 0; padding:20px;}
 }
 
 /**
+	Here only for historical reason?
+
  * Wrapper - Original Jekyll wrapper
 	Useful for main content wrapper
 	* has significant left,right margin 
@@ -49,19 +50,8 @@ aside { box-sizing: border-box; margin: 0; padding:20px;}
     }
 }
 
+/* Clearfix */
+%clearfix { &:after { content: ""; display: table; clear: both; } }
 
-
-/**
- * Clearfix
- */
-%clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-
-
+// alternative, to include class="group"
+.group { @extend %clearfix;}

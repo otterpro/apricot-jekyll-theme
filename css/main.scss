@@ -25,8 +25,13 @@ $brand-color:      #2a7ae2;
 // Width of the content area
 $content-width:   1024px;// 800px;
 
+// OLD
 $content-percent: 70%;
 $sidebar-percent: 30%;
+
+// NEW
+$main-width-percent-in-2-col: 70%;
+$sidebar-width-percent: 30%;
 
 $on-palm:          640px;
 $on-laptop:        1024px;//800px;
@@ -46,6 +51,15 @@ $social-icon-color: Gray;
         @content;
     }
 }
+{% comment %}
+{% if site.number_of_column == 2 %}
+// 2 Column Layout
+.col_width { width: 2em;}
+{% else %}
+// 1 Column Layout: default
+.col_width { width: 1em;}
+{% endif %}
+{% endcomment %}
 
 /* temp debugging */
 // .site-nav {background-color:gold;}
