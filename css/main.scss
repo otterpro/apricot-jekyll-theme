@@ -23,18 +23,15 @@ $brand-color:      #2a7ae2;
 // $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:   1024px;// 800px;
+// This includes both sidebar and main
+$content-width:   1024px;
+$max-content-width: 1600px; 
 
-// OLD
-$content-percent: 70%;
-$sidebar-percent: 30%;
-
-// NEW
-$main-width-percent-in-2-col: 70%;
-$sidebar-width-percent: 30%;
+$two-column-main-percent: 70%;
+$two-column-sidebar-percent: 30%;
 
 $on-palm:          640px;
-$on-laptop:        1024px;//800px;
+$on-laptop:        1024px;
 
 // Twitter, Github, RSS icons (inline SVG)
 $social-icon-color: Gray; 
