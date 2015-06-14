@@ -5,15 +5,17 @@
 main { width: 100%; margin: 0 auto; padding: 20px; } 
 aside { box-sizing: border-box; margin: 0; padding:20px;}
 
+// 2 Column Layout 
+.two-column-content {width:100;} // on mobile
 // @include media-query($on-palm) {
-@media screen and (min-width: $on-palm) {
-	.two-col-main { width: $two-column-main-percent; float:left; } 
+@media screen and (min-width: $on-palm) {  // on PC/tablet
+	.two-column-content { width: $two-column-main-percent; float:left; } 
 	aside { width: $two-column-sidebar-percent ; float:left;}
 	// #sidebar{ width: 18%; float:left;margin-right: 2%; }
 }
 
-// TODO: rename to .internal-2-column?
 // Tag Detail page contains multi-column
+// May rename to something else, in case tags are not 2 col
 .tag-detail {
 	-webkit-column-count: 2;
 	-moz-column-count: 2;
@@ -42,8 +44,8 @@ aside { box-sizing: border-box; margin: 0; padding:20px;}
 
 	/* mobile and small screen */
     @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        // max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+        // max-width:         calc(#{$content-width} - (#{$spacing-unit}));
         padding-right: $spacing-unit / 2;
         padding-left: $spacing-unit / 2;
     }

@@ -55,6 +55,8 @@ In _config.yml
 * add instagram, twitter, linked-in, flickr,  other socials 
 * embed youtube
 * add like,tweet to each post
+* add like,tweet to each post
+    see font-awesome page
 * CSS replace .content with article element
 
 

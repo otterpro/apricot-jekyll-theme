@@ -1,0 +1,5 @@
+  {% for post in site.posts limit:10 %}
+        <li>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title | capitalize }}</a>
+        </li>
+  {% endfor %}

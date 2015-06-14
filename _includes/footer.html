@@ -2,20 +2,12 @@
 
 <!-- Footer-main : top part of footer -->
 <div class="footer-main">
+<div class="footer-col-wrapper ">
 
 <!-- Col 1 -->
-<div class="footer-col-wrapper ">
   <div class="footer-col  footer-col-1">
-    <ul class="contact-list">
-      <li>{{ site.title }}</li>
-      <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-    </ul>
-  </div>
-
-  <!-- Col 2 -->
-  <div class="footer-col  footer-col-2">
     <ul class="social-media-list">
-
+      <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
       <!-- RSS icon-->
       <a href="{{ "/feed.xml" | prepend: site.baseurl }}">
         <!-- <svg width=16 height=16 viewBox="0 0 512 512"> -->
@@ -64,12 +56,32 @@
       </li>
 		
     </ul>
-  </div>
 
+  </div>
+  <!-- Col 2 -->
+  <div class="footer-col  footer-col-2">
+    {% if site.categories %}
+    Categories
+    <ul class="tag-list">
+      {% include category-list.html %}
+    </ul>
+    {% endif %}
+    {% if site.tags %}
+    Tags
+    <ul class="tag-list">
+      {% include tag-list.html %}
+    </ul>
+    {% endif %}
+
+  </div>
   <!-- Col 3  -->
   <div class="footer-col  footer-col-3">
-    <p ></p>
+Latest Posts
+<ul class="footer-latest-posts"> 
+  {% include post-latest-list.html %}
+  </ul>
   </div>
+
 </div> <!-- footercolwrapper -->
 </div><!-- footer-main -->
 

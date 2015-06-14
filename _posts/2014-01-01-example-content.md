@@ -1,5 +1,6 @@
 ---
 layout: post
+permalink: example-content-original
 ---
 
 <div class="message">

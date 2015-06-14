@@ -10,15 +10,16 @@ footer {
 .footer-main {
     // border-top: 0px solid LightGray;
     // padding: $spacing-unit 0;
-    padding: 0px 20px 0px 20px;
+	background-color: #ccc;
+    padding: 20px 20px 0px 20px;
 }
 
 // .footer-heading {
 //     font-size: 18px;
 //     margin-bottom: $spacing-unit / 2;
 // }
-
-.contact-list,
+.tag-list,
+.footer-latest-posts,
 .social-media-list {
     list-style: none;
     margin-left: 0;
@@ -38,18 +39,21 @@ footer {
 }
 
 .footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+    // width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+    // width:         calc(35% - (#{$spacing-unit} / 2));
+	width: 30%;
 }
 
 .footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+    // width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+    // width:         calc(20% - (#{$spacing-unit} / 2));
+	width: 30%;
 }
 
 .footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
+    // width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+    // width:         calc(45% - (#{$spacing-unit} / 2));
+	width: 40%;
 }
 
 // ** (c)Copyright 2015 message and Powered by Jekyll | URL
