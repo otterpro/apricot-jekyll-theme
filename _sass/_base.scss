@@ -130,7 +130,8 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
+	font-family: $code-font-family;
+    font-size: $code-font-size;
     border: 1px solid lightGray;
     border-radius: 3px;
     background-color: #eef;

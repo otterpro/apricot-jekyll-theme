@@ -2,10 +2,11 @@
 {%if page.img %}
   {% assign header_image= page.img %}
 {%else%}
-  {% assign header_image = "/img/header1.jpg" %}
+  {% assign header_image = "/img/header_book1.jpg" %}
 {%endif%}
 
-<header class="site-header" style="background:url({{header_image}}) no-repeat fixed; background-size:100%;">
+<header class="site-header" style="background:url({{header_image}})
+  top center no-repeat fixed ; background-size:100% auto; ">
 
   <div class="wrapper">
 

@@ -5,7 +5,12 @@
 
 <body>
 
-  {{ content }}
+{% include header.html %}
+<main class="wrapper">
+      {{ content }}
+</main>
+
+{% include footer.html %}
 
 <!-- highlight.js -->
 <script src="{{site.url}}/js/highlight.pack.js"></script>
