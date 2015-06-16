@@ -50,6 +50,9 @@ minItemsToShowToc: 2
 
 # Custom Vars for Apricot Theme
 
+# header banner image file, found in /img/ directory
+header_img:  header_book1.jpg
+
 # TODO: maybe?
 #number_of_column: 1 
 # either 1 or 2 at this time. Default: 1

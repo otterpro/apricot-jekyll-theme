@@ -1,9 +1,17 @@
 <!-- Header Image  -->
 {%if page.img %}
-  {% assign header_image= page.img %}
+  {% assign header_image = page.img %}
+{%elsif site.header_img %}
+  {% assign header_image = site.header_img %}
 {%else%}
-  {% assign header_image = "/img/header_book1.jpg" %}
+  {% assign header_image = "https://c1.staticflickr.com/9/8675/16533077649_518a083613_o.jpg" %}
 {%endif%}
+
+<!-- add "img/" if it is a local image.  -->
+{% if header_image contains "http://" or header_image contains "https://" %}
+{% else %}
+  {% capture header_image %}{{site.url}}/img/{{header_image}}{% endcapture %}
+{% endif %}
 
 <header class="site-header" style="background:url({{header_image}})
   top center no-repeat fixed ; background-size:100% auto; ">
