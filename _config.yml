@@ -1,8 +1,8 @@
 # Site settings
-title: otter.pro
-email: dan@otter.pro
+title: Title of my website
+email: email@example.com
 description: > # this means to ignore newlines until "baseurl:"
-  Hi, I'm Daniel D Kim and I'm a software developer in the Bay Area.
+  Apricot is a theme for Jekyll.  
 baseurl: "" # the subpath of your site, e.g. /blog/
 #url: "http://yourdomain.com" # the base hostname & protocol for your site
 url: "" # the base hostname & protocol for your site
@@ -43,6 +43,8 @@ defaults:
     values:
         layout: "page"
         author: "Daniel Kim"
+
+exclude: ["Guardfile"]
 
 # TOC Generator setting
 contentsLabel: "Table of Contents"

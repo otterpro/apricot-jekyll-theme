@@ -1,5 +1,7 @@
 _site
+_posts
 _pages
 .sass-cache
 img/*.jpg
 favicon.ico
+_secret.yml

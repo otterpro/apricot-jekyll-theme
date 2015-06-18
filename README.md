@@ -59,6 +59,19 @@ language without having to specify the language.
 [Highlight.js](https://highlightjs.org/) offered the best highlighting,
     although it is client-based javascript. 
 
+Flickr
+=====
+[Flickr plugin](https://github.com/cnunciato/jekyll-flickr)
+I modified it, so that it defaults to "Large" image instead of "Medium" sized
+image.
+
+Requires typhoeus gem
+
+in _config.yml
+
+    flickr:
+      api_key: kjh3g4kj1h2gkjh1gvbnvd7o1khmqjh2g3
+
 Github
 =======
 <https://github.com/otterpro/apricot-jekyll>
@@ -71,6 +84,14 @@ Additional thanks to
 {% comment %}
 TODO
 =======
+* make title full-width with background 
+*       see davidwalsh.name
+* screenshot - make sure screenshot of default header img, not otter.pro header
+    img
+* assign thumbnail image to each categories/tags so that they have thumbnail
+*   if the article doesn't have any header image thumbnail
+* related articles are shown at the bottom - just match the tags
+    * or categories
 * enable certain tags/categories (and their posts) to be displayed on the sidebar
     sidebar_categories: project
     sidebar_tags: important, linux, jekyll
@@ -88,5 +109,7 @@ TODO
 * see in head.html
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 * somehow, it was showing "//mypage.html", not "/mypage.html".  
+
+* Make better SASS media query (see http://davidwalsh.name/sass-media-query)
 
 {% endcomment %}

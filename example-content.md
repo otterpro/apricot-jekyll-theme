@@ -15,6 +15,11 @@ For code, indent the block of codes
 
 Image
 =========
+Flickr using flickr_photo.rb 
+
+{% flickr_photo 18615461266  %}
+
+{% flickr_photo 7651295202 "Small" %}
 
 Table
 =======
