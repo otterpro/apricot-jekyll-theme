@@ -1,9 +1,14 @@
 ---
+layout: default
 permalink: /tags/
 # show categories and tags in single page
 # heavily modified version of tag page from https://github.com/yulijia/freshman21/
 # MAYBE: split into 2 pages, (cats, tags)
 ---
+{% include header.html %}
+Tags and Categories
+{% include header_end.html %}
+<div class="wrapper">
 <h1>Categories</h1>
 <div class="tag-detail">
 <ul >
@@ -30,6 +35,7 @@ permalink: /tags/
 {% for tag in site.tags %}
 <a href="#{{ tag[0] }}" title="{{ tag[0] }}" >
   {{ tag[0] }}({{ tag[1].size }})</a>
+
 {% endfor %}
 </ul>
 
@@ -47,6 +53,7 @@ permalink: /tags/
 {% endfor %}
 </ul>
 </div>
+</div>
 
-
+{% include footer.html %}
 

@@ -8,13 +8,13 @@
 
 
   {% for cat in post.categories %}
-  <a href="{{site.url}}tags/#{{ cat }}">
+  <a href="{{site.url}}/tags/#{{ cat }}">
     {{ cat }}
   </a>
   {% endfor %}
 
   {% for tag in post.tags %}
-  <a href="{{site.url}}tags/#{{ tag }}">
+  <a href="{{site.url}}/tags/#{{ tag }}">
     {{ tag }}
   </a>
   {% endfor %}

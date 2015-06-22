@@ -53,14 +53,25 @@ module Jekyll
     end
 
     def render(context)
-        @api_key = context.registers[:site].config["flickr"]["api_key"]
+      # @api_key = context.registers[:site].config["flickr"]["api_key"]
+      flickr_config=context.registers[:site].config["flickr"]
+      if flickr_config
+      @api_key =flickr_config["api_key"]
+      else
+        puts "ERROR: Flickr API not found in config"
+        return "<p>ERROR: Flickr API not found in config</p>"
+      end
+      begin
         @photo.merge!(@@cached[photo_key] || get_photo)
+      rescue=>e
+        puts "Error connecting to flickr or the internet. Exception:#{e}"
+        return "<p>Error connecting to flickr or the internet.</p>"
+      ensure
+        #
+      end
 
         selected_size = @photo[:sizes][@photo[:size]]
         "<a href=\"#{@photo[:url]}\"><img class=\"#{@photo[:size]}\" src=\"#{selected_size[:source]}\" title=\"#{@photo[:title]}\" alt=\"#{@photo[:title]}\"></a>"
-    rescue=>e
-      puts "Error connecting to flickr or the internet. Exception:#{e}"
-     "<p>Flickr plugin failed: try building again</p>" 
     end
 
     def get_photo

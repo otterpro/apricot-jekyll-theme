@@ -8,12 +8,8 @@
 // }
 
 
-.content-heading {
-    font-size: 20px;
-}
-
 // In index.html
-.post-list {
+.article-list {
     margin-left: 0;
     list-style: none;
 
@@ -21,23 +17,31 @@
         margin-bottom: $spacing-unit;
     }
 }
-.post-link {
+.article-link {
     display: block;
     font-size: 24px;
 }
 
 // Date, Author, Tags in post
-.post-meta {
+.article-meta {
     font-size: $small-font-size;
     color: Gray;
 }
 
-.post-header {
-    margin-bottom: $spacing-unit;
-}
+// // TODO: should be renamed content-header
+// // or 
+// .post-header {
+//     margin-bottom: $spacing-unit;
+// 	// position: absolute;  // experimenting 
+// 	// padding: 0px 0;
+// 	// display: block;
+// 	// padding: $article-title-padding;
+//
+// }
 
-// page/posts
-.post-title {
+// page/posts/ article-title
+// TODO: ??? where is this used?
+.article-title {
     //font-size: 42px;
     font-size: 1.4em;
     letter-spacing: -1px;

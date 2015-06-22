@@ -1,30 +1,15 @@
 ---
-layout: 1col
+layout: default
 sitemap:
     changefreq: 'weekly'
 ---
 
-<div class="home">
+{% include header.html %}
+{% include header_end.html %}
 
-  {% comment %}
-  <!-- THis part has been moved to archive.html  -->
-  <h1 class="post-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-    <li>
-    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-    <h2>
-      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </h2>
-    </li>
-    {% endfor %}
-  </ul>
-  {% endcomment %}
 
   <!-- This loops through the paginated posts -->
-  <div class="wrapper"><h>
+  <div class="wrapper">
 
     {% for post in paginator.posts %}
     <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
@@ -34,8 +19,8 @@ sitemap:
       <a class="read-more" href="{{ post.url }}">[Read More...]</a>
     </div>
     {% endfor %}
-  </div>
 
   <!-- Pagination links -->
   {% include pagination.html %}
-</div>
+  </div>
+{% include footer.html %}

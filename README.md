@@ -2,7 +2,8 @@
 title: Apricot Jekyll Theme 
 permalink: apricot-jekyll/
 img: https://c1.staticflickr.com/5/4115/4858568740_901503edff_o.jpg
-
+category: project
+tag: <jekyll>
 show_in_menu: true
 ---
 Apricot is a theme for Jekyll static site generator. 
@@ -55,7 +56,9 @@ Code highlighting
 ---------
 I really hated embedding liquid tag "{&#37; highlight LANG %}" for highlighting any
 code within the markdown text because it made the text look ugly. I also wanted the highlighter to be able to detect the
-language without having to specify the language.  
+language without having to specify the language. It doesn't have to be
+super-accurate.  Just highlight it so that numbers and common keywords look
+different.    
 [Highlight.js](https://highlightjs.org/) offered the best highlighting,
     although it is client-based javascript. 
 
@@ -84,8 +87,12 @@ Additional thanks to
 {% comment %}
 TODO
 =======
+
 * make title full-width with background 
 *       see davidwalsh.name
+* or make it transparent, like 
+* https://tech.zalando.com/blog/watch-fashion-is-hard-postgresql-is-easy/
+*
 * screenshot - make sure screenshot of default header img, not otter.pro header
     img
 * assign thumbnail image to each categories/tags so that they have thumbnail

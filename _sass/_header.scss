@@ -10,7 +10,7 @@
     position: relative;
 
 	// Added to increase height so that background image could fit
-	height:250px;
+	height: $header-height;
 
 	// header image 
 	// These are defined inline, due to using inline URL()
@@ -43,6 +43,36 @@
 	text-shadow: 2px 2px 8px black,
 				 -2px -2px 8px black;
 }
+
+.article-title-in-header {
+	color: white;
+	font-size: 1.5em;
+	background-color: rgba(0,0,0,.55);
+	//padding: 220px;
+	margin-bottom: 0px;
+	width: 100%;
+	// top: 230px;
+	left: 0px;  
+	// height: 40px;
+	bottom:0;
+	position: absolute;
+	text-align: center;
+}
+.article-title-in-header2 {
+	color: white;
+	font-size: 1.5em;
+	background-color: rgba(0,0,0,.55);
+	//padding: 220px;
+	margin-bottom: 0px;
+	width: 100%;
+	// top: 230px;
+	left: 0px;  
+	// height: 40px;
+	top:210px;
+	position: absolute;
+	text-align: center;
+}
+
 
 .site-nav {
     float: right;

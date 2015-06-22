@@ -1,7 +1,8 @@
 ---
 show_in_menu: true
 ---
-Inline HTML elements
+
+Inline HTML elements [test](/)
 ========
 
 *Bold*, **italic**, `monospaced text`
