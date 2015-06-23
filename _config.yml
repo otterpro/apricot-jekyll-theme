@@ -44,7 +44,7 @@ defaults:
         layout: "page"
         author: "Daniel Kim"
 
-exclude: ["Guardfile"]
+exclude: ["Guardfile","*.sh"]
 
 # TOC Generator setting
 contentsLabel: "Table of Contents"

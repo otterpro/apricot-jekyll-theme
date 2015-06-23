@@ -3,8 +3,9 @@ title: Apricot Jekyll Theme
 permalink: apricot-jekyll/
 img: https://c1.staticflickr.com/5/4115/4858568740_901503edff_o.jpg
 category: project
-tag: <jekyll>
+tag: jekyll
 show_in_menu: true
+additional_copy_path: ~/project/otter.pro/apricot-jekyll/README.md
 ---
 Apricot is a theme for Jekyll static site generator. 
 I created it so that I could use it for my own [personal blog](http:/www.otter.pro). 
