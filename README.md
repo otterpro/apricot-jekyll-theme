@@ -1,15 +1,14 @@
 ---
 title: Apricot Jekyll Theme 
 permalink: apricot-jekyll/
-img: https://c1.staticflickr.com/5/4115/4858568740_901503edff_o.jpg
+img: https://c1.staticflickr.com/9/8675/16533077649_518a083613_o.jpg
 category: project
 tag: jekyll
 show_in_menu: true
 additional_copy_path: ~/project/otter.pro/apricot-jekyll/README.md
 ---
-Apricot is a theme for Jekyll static site generator. 
-I created it so that I could use it for my own [personal blog](http:/www.otter.pro). 
-I hope you find it useful.
+Apricot is a theme for [Jekyll](http://jekyllrb.com) static site generator. 
+I created it so that I could use it for my [personal blog](http:/www.otter.pro). 
 
 Additional front matter settings for this theme
 ===============
@@ -67,14 +66,14 @@ Flickr
 =====
 [Flickr plugin](https://github.com/cnunciato/jekyll-flickr)
 I modified it, so that it defaults to "Large" image instead of "Medium" sized
-image.
+image, as before.
 
-Requires typhoeus gem
+Requires typhoeus gem.
 
 in _config.yml
 
     flickr:
-      api_key: kjh3g4kj1h2gkjh1gvbnvd7o1khmqjh2g3
+      api_key: YOUR_FLICKR_API_KEY_HERE
 
 Github
 =======

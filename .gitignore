@@ -1,6 +1,6 @@
 _site
 _posts
-_pages
+page
 .sass-cache
 img/*.jpg
 favicon.ico
