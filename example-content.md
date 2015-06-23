@@ -14,6 +14,7 @@ For code, indent the block of codes
         bar=1+2
         str = "hello"
 
+
 Image
 =========
 Flickr using flickr_photo.rb 
@@ -22,6 +23,4 @@ Flickr using flickr_photo.rb
 
 {% flickr_photo 7651295202 "Small" %}
 
-Table
-=======
 
