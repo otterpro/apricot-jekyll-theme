@@ -61,17 +61,18 @@ module Jekyll
         puts "ERROR: Flickr API not found in config"
         return "<p>ERROR: Flickr API not found in config</p>"
       end
-      begin
         @photo.merge!(@@cached[photo_key] || get_photo)
+
+
+
+        selected_size = @photo[:sizes][@photo[:size]]
+        return "<a href=\"#{@photo[:url]}\"><img class=\"#{@photo[:size]}\" src=\"#{selected_size[:source]}\" title=\"#{@photo[:title]}\" alt=\"#{@photo[:title]}\"></a>"
       rescue=>e
-        puts "Error connecting to flickr or the internet. Exception:#{e}"
-        return "<p>Error connecting to flickr or the internet.</p>"
+        puts "Error with flickr. Exception:#{e}"
+        return "<p>Error using flickr plugin.</p>"
       ensure
         #
       end
-
-        selected_size = @photo[:sizes][@photo[:size]]
-        "<a href=\"#{@photo[:url]}\"><img class=\"#{@photo[:size]}\" src=\"#{selected_size[:source]}\" title=\"#{@photo[:title]}\" alt=\"#{@photo[:title]}\"></a>"
     end
 
     def get_photo
