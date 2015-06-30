@@ -1,5 +1,5 @@
 ---
-show_in_menu: true
+show_in_menu: false
 ---
 
 Inline HTML elements [test](/)

@@ -3,7 +3,7 @@
 #
 # Make sure to change the destination to your site
 
-DESTINATION="otter.pro:/home/dan/www/otter.pro"
+DESTINATION="otter.pro:/home/dan/www/otter.pro/apricot-jekyll/_site/"
 
 if [ -n "${DESTINATION:+1}" ]; then
 	SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
