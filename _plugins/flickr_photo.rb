@@ -56,87 +56,86 @@ module Jekyll
       # @api_key = context.registers[:site].config["flickr"]["api_key"]
       flickr_config=context.registers[:site].config["flickr"]
       if flickr_config
-      @api_key =flickr_config["api_key"]
+        @api_key =flickr_config["api_key"]
       else
         puts "ERROR: Flickr API not found in config"
         return "<p>ERROR: Flickr API not found in config</p>"
       end
-        @photo.merge!(@@cached[photo_key] || get_photo)
+      @photo.merge!(@@cached[photo_key] || get_photo)
 
 
 
-        selected_size = @photo[:sizes][@photo[:size]]
-        return "<a href=\"#{@photo[:url]}\"><img class=\"#{@photo[:size]}\" src=\"#{selected_size[:source]}\" title=\"#{@photo[:title]}\" alt=\"#{@photo[:title]}\"></a>"
-      rescue=>e
-        puts "Error with flickr. Exception:#{e}"
-        return "<p>Error using flickr plugin.</p>"
-      ensure
-        #
-      end
+      selected_size = @photo[:sizes][@photo[:size]]
+      return "<a href=\"#{@photo[:url]}\"><img class=\"#{@photo[:size]}\" src=\"#{selected_size[:source]}\" title=\"#{@photo[:title]}\" alt=\"#{@photo[:title]}\"></a>"
+    rescue=>e
+      puts "Error with flickr. Exception:#{e}"
+      return "<p>Error using flickr plugin.</p>"
+    ensure
+      #
     end
 
     def get_photo
-        hydra = Typhoeus::Hydra.new
+      hydra = Typhoeus::Hydra.new
 
-        urls_req = Typhoeus::Request.new("https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=#{@api_key}&photo_id=#{@photo[:id]}")
-        urls_req.on_complete do |resp|
-            parsed = Nokogiri::XML(resp.body)
-            parsed.css("rsp").each do |status|
-            if status["stat"] == "ok" then # Check to make sure an OK status is returned
+      urls_req = Typhoeus::Request.new("https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=#{@api_key}&photo_id=#{@photo[:id]}")
+      urls_req.on_complete do |resp|
+        parsed = Nokogiri::XML(resp.body)
+        parsed.css("rsp").each do |status|
+          if status["stat"] == "ok" then # Check to make sure an OK status is returned
             parsed.css("size").each do |el|
-                @photo[:sizes][el["label"]] = {
-                    :width => el["width"],
-                    :height => el["height"],
-                    :source => el["source"],
-                    :url => el["url"]
-                }
+              @photo[:sizes][el["label"]] = {
+                :width => el["width"],
+                :height => el["height"],
+                :source => el["source"],
+                :url => el["url"]
+              }
             end
           else
             # Where a photo id is either not found or is marked as private
             @photo[:sizes][@photo[:size]] = {
-                :width => @@err_width,
-                :height => @@err_height,
-                :source => @@err_uri_placeholder,
-                :url => @@err_uri_placeholder
-              }
+              :width => @@err_width,
+              :height => @@err_height,
+              :source => @@err_uri_placeholder,
+              :url => @@err_uri_placeholder
+            }
           end
         end
       end
 
       info_req = Typhoeus::Request.new("https://api.flickr.com/services/rest/?method=flickr.photos.getInfo&api_key=#{@api_key}&photo_id=#{@photo[:id]}")
       info_req.on_complete do |resp|
-          parsed = Nokogiri::XML(resp.body)
-          parsed.css("rsp").each do |status|
-            if status["stat"] == "ok" then # Only parse if stat = 'ok'
-              @photo[:title] = parsed.css("title").inner_text
-              @photo[:caption] = parsed.css("description").inner_text
-              @photo[:url] = parsed.css("urls url").inner_text
-            else
-              @photo[:title] = @@err_text
-              @photo[:caption] = @err_text
-              @photo[:url] = @@err_uri_link
-            end
+        parsed = Nokogiri::XML(resp.body)
+        parsed.css("rsp").each do |status|
+          if status["stat"] == "ok" then # Only parse if stat = 'ok'
+            @photo[:title] = parsed.css("title").inner_text
+            @photo[:caption] = parsed.css("description").inner_text
+            @photo[:url] = parsed.css("urls url").inner_text
+          else
+            @photo[:title] = @@err_text
+            @photo[:caption] = @err_text
+            @photo[:url] = @@err_uri_link
+          end
         end
       end
 
-        exif_req = Typhoeus::Request.new("https://api.flickr.com/services/rest/?method=flickr.photos.getExif&api_key=#{@api_key}&photo_id=#{@photo[:id]}")
-        exif_req.on_complete do |resp|
-            parsed = Nokogiri::XML(resp.body)
-            parsed.css("exif").each do |el|
-                @photo[:exif][el["label"]] = el.first_element_child.inner_text
-            end
+      exif_req = Typhoeus::Request.new("https://api.flickr.com/services/rest/?method=flickr.photos.getExif&api_key=#{@api_key}&photo_id=#{@photo[:id]}")
+      exif_req.on_complete do |resp|
+        parsed = Nokogiri::XML(resp.body)
+        parsed.css("exif").each do |el|
+          @photo[:exif][el["label"]] = el.first_element_child.inner_text
         end
+      end
 
-        hydra.queue(urls_req)
-        hydra.queue(info_req)
-        hydra.queue(exif_req)
-        hydra.run
+      hydra.queue(urls_req)
+      hydra.queue(info_req)
+      hydra.queue(exif_req)
+      hydra.run
 
-        @@cached[photo_key] = @photo
+      @@cached[photo_key] = @photo
     end
 
     def photo_key
-        "#{@photo[:id]}"
+      "#{@photo[:id]}"
     end
 
   end
