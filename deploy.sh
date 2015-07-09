@@ -5,6 +5,8 @@
 
 DESTINATION="otter.pro:/home/dan/www/otter.pro/apricot-jekyll/_site/"
 
+jekyll build --config _config.yml,_secret.yml
+
 if [ -n "${DESTINATION:+1}" ]; then
 	SCRIPTPATH=$( cd $(dirname $0) ; pwd -P )
 	/usr/bin/rsync -avz  $SCRIPTPATH/_site/ $DESTINATION
