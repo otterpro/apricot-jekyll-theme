@@ -18,8 +18,15 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "feed.xml" | prepend: site.url }}" />
 
   <!-- ShareThis -->
+  {% if site.sharethis %}
   <script type="text/javascript">var switchTo5x=true;</script>
   <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-  <script type="text/javascript">stLight.options({publisher: "1f71155a-b9dd-420e-ac04-d7dfd6635802", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+  <script type="text/javascript">stLight.options({publisher: "{{site.sharethis}}" , doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+  {% endif %}
+
+  <!-- SumoMe -->
+  {% if site.sumome %}
+  <script src="//load.sumome.com/" data-sumo-site-id="{{ site.sumome }}" async="async"></script>
+  {% endif %}
 
 </head>

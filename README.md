@@ -87,6 +87,8 @@ Additional thanks to
 {% comment %}
 TODO
 =======
+* see <http://www.michael-noll.com/tutorials/writing-an-hadoop-mapreduce-program-in-python/>
+* for TOC
 
 * make title full-width with background 
 *       see davidwalsh.name

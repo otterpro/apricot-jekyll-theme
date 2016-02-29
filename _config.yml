@@ -6,8 +6,8 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 #url: "http://yourdomain.com" # the base hostname & protocol for your site
 url: "" # the base hostname & protocol for your site
-#twitter_username: kiwipop
-github_username:  otterpro
+#twitter_username: "" 
+github_username: ""  
 
 # permalink is set to /title/, as it works best with NVTool
 permalink: /:title/
@@ -20,7 +20,13 @@ permalink: /:title/
 # port: 80
 host: 0.0.0.0
 
+#flickr:
+#    api_key: "Flickr API KEY Here"
+
+# sumome: "ID # HERE"
+
 # pagination
+gems: [jekyll-paginate]
 paginate: 2
 paginate_path: "/index:num/"
 
@@ -35,14 +41,14 @@ defaults:
         type: "posts"
     values:
         layout: "post"
-        author: "Daniel Kim"
+        #author: "Daniel Kim"
   -
     scope:
         path: ""
         type: "pages"
     values:
         layout: "page"
-        author: "Daniel Kim"
+        #author: "Daniel Kim"
 
 exclude: ["Guardfile","*.sh", "*.yml"]
 
@@ -53,7 +59,8 @@ minItemsToShowToc: 2
 # Custom Vars for Apricot Theme
 
 # header banner image file, found in /img/ directory
-header_img:  header_book1.jpg
+# header_img:  header_book1.jpg
+header_img:  header1.jpg
 
 # TODO: maybe?
 #number_of_column: 1 

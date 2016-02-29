@@ -36,10 +36,8 @@ aside { box-sizing: border-box; margin: 0; padding:20px;}
 	max-width: $max-content-width;
     margin-right: auto;
     margin-left: auto;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
+    padding-right: $left-right-padding;
+    padding-left: $left-right-padding;
 	padding-bottom: 1em;
     @extend %clearfix;
 
