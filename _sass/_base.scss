@@ -40,6 +40,7 @@ ul, ol, dl, figure,
 
 
 
+
 /**
  * Images
  */
@@ -95,6 +96,16 @@ h2 { font-size: 1.2em;}
 h3,h4,h5,h6 { font-size: 1.1em;}
 
 
+/* Add padding to h1 since it looks strange without it
+	TODO: move this to .article-list/title instead?
+	h1,h2 is also used commonly for markdown text, 
+	so I used similar style from github's markdown examples.
+*/
+
+h1,h2 { margin-top: 1em; }
+
+/* h1, draw line after text */
+h1,h2 { border-bottom: 1px solid #eee; }
 
 /**
  * Links

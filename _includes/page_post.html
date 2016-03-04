@@ -1,0 +1,25 @@
+{% include header.html %}
+  {{ page.title }}
+{% include header_end.html %}
+
+
+<main class="wrapper">
+  {% comment %} Post only {% endcomment %}
+  {% if page.date %}
+    {% assign post= page %}
+    {%include post-meta.html %}
+  {% endif %}
+
+  <article >
+    {{ content | toc_generate }}
+  </article>
+
+  
+  {% if site.sharethis %}
+    {% include sharethis.html %}
+  {% endif %}
+
+</main>
+
+{% include footer.html %}
+

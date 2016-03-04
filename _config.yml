@@ -10,6 +10,7 @@ url: "" # the base hostname & protocol for your site
 github_username: ""  
 
 # permalink is set to /title/, as it works best with NVTool
+# This may break Page, but so far so good?
 permalink: /:title/
 
 #TODO: uncomment these on production
@@ -25,8 +26,14 @@ host: 0.0.0.0
 
 # sumome: "ID # HERE"
 
+# highlight.js: to enable it, set it to "true"
+highlight_js: true
+
 # pagination
-gems: [jekyll-paginate]
+# gems: [jekyll-paginate]
+gems: 
+    - jekyll-paginate
+
 paginate: 2
 paginate_path: "/index:num/"
 

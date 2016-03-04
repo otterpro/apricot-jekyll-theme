@@ -9,6 +9,7 @@
 
 
 // In index.html
+// however, some of these are not being used
 .article-list {
     margin-left: 0;
     list-style: none;
@@ -40,19 +41,19 @@
 // }
 
 // page/posts/ article-title
-// TODO: ??? where is this used?
+// This is used in /index.html, 
+// listing all the articles and its titles
 .article-title {
     //font-size: 42px;
-    font-size: 1.4em;
-    letter-spacing: -1px;
-    line-height: 1;
-
-    @include media-query($on-laptop) {
-     // font-size: 36px;
-     font-size: 1.3em;
-    }
+    //font-size: 1.4em;
+    //letter-spacing: -1px;
+    //line-height: 1.5em;
 }
 /* NOT USED??? */
+article {
+    font-size: 1.3em;
+
+}
 // article{
 //     margin-bottom: $spacing-unit;
 //
