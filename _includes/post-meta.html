@@ -1,6 +1,13 @@
 <!-- var must be post, not page. -->
 
-<p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}
+<p class="post-meta">
+
+{% if page.hide_date %}
+{% else %}
+  {{ post.date | date: "%b %-d, %Y" }}
+{% endif %}
+
+
   {% comment %}
   {% if post.author %} • {{ post.author }}{% endif %}
   {% if post.meta %} • {{ post.meta }}{% endif %}
@@ -8,7 +15,7 @@
 
 
   {% for cat in post.categories %}
-  <a href="{{site.url}}/tags/#{{ cat }}">
+  <a href="{{site.url}}/categories/{{ cat }}">
     {{ cat }}
   </a>
   {% endfor %}
