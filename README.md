@@ -1,18 +1,18 @@
 ---
-title: Apricot Jekyll Theme 
 permalink: apricot-jekyll/
 img: https://c1.staticflickr.com/9/8675/16533077649_518a083613_o.jpg
 category: project
 tag: jekyll
-show_in_menu: true
 additional_copy_path: ~/project/otter.pro/apricot-jekyll/README.md
+hide_date: true
+title: Apricot Jekyll Theme 
+strip_front_matter: true
 ---
 Apricot is a theme for [Jekyll](http://jekyllrb.com) static site generator. 
-I created it so that I could use it for my [personal blog](http:/www.otter.pro). 
+I created it so that I could use it for my [personal blog](http://www.otter.pro). 
 
-Additional front matter settings for this theme
+Additional settings 
 ===============
-
 Change site header image
 ----------
 Add "img" in the front matter.  Images located in the local server should be
@@ -29,6 +29,23 @@ By default, the page is not shown on the menu.
 
     show_in_menu: true
 
+Show URL in header menu
+-----------------
+Other URL can be added to the menu items, which are shown in the navigation menu.
+
+In `_config.yml`, add `menu` items like this: 
+
+    menu:
+      -
+        url: "/categories/project/"
+        title: "Projects"
+      -
+        url: "https://github.com/otterpro/"
+        title: "Github"
+        target: "_blank"  
+
+`target: "_blank"` opens the URL in a new window
+
 Generation of table of contents
 ----------
 [Jekyll Table of Contents Generator](https://github.com/dafi/jekyll-toc-generator)
@@ -39,6 +56,17 @@ To disable table of contents for individual page or post, add the following
 front matter.  
 
     noToc: true
+
+Don't display dates on certain posts
+-----------------
+
+    hide_date: true
+
+Additional note: `category` and `tag` doesn't work on page properly because Jekyll doesn't count
+them for pages, but only for posts.  Since I wanted to use categories for pages
+and not just for posts, I've decided to not use the page.  Instead, I'd prefer
+just hiding the dates to give it an appearance of a page.
+
 
 Sitemap configuration
 ------------
@@ -83,10 +111,15 @@ Additional thanks to
 ==========
 * [HTML inline SVG Icons](http://codepen.io/ruandre/pen/howFi)
 * [Image of apricot label from California Historical Society](https://flic.kr/p/rbYkYV)
+* [Jekyll category plugin](https://github.com/zroger/jekyll-categories)
+* [Font-Awesome-SVG-PNG](https://github.com/encharm/Font-Awesome-SVG-PNG)
 
 {% comment %}
 TODO
 =======
+Improve TOC style, example
+<http://idratherbewriting.com/documentation-theme-jekyll/mydoc/mydoc_yaml_tutorial.html>
+
 * see <http://www.michael-noll.com/tutorials/writing-an-hadoop-mapreduce-program-in-python/>
 * for TOC
 
