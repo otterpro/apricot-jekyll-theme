@@ -34,7 +34,8 @@ highlight_js: true
 gems: 
     - jekyll-paginate
 
-paginate: 2
+paginate: 5
+# number of items per list in page, default: 5
 paginate_path: "/index:num/"
 
 # Build settings
