@@ -1,0 +1,15 @@
+ // Categories and tags
+a.category, a.tag
+{
+	//font-family: $code-font-family;
+    //font-size: $code-font-size;
+    //border: 1px solid lightGray;
+    //border-radius: 3px;
+	padding: 0px 4px;
+	color: $category-text-color;
+	text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	border-radius: 6px;  // rounded 
+    background-color: $category-background-color;
+}
