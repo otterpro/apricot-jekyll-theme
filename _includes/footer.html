@@ -68,28 +68,25 @@
   </div>
   <!-- Col 2 -->
   <div class="footer-col  footer-col-2">
-    {% if site.categories %}
-    Categories
-    <ul class="tag-list">
-      {% include category-list.html %}
-    </ul>
-    {% endif %}
-    {% if site.tags %}
-    Tags
-    <ul class="tag-list">
-      {% include tag-list.html %}
-    </ul>
-    {% endif %}
-
-  </div>
-  <!-- Col 3  -->
-  <div class="footer-col  footer-col-3">
 Latest Posts
 <ul class="footer-latest-posts"> 
   {% include post-latest-list.html %}
   </ul>
   </div>
 
+  <!-- Col 3  -->
+  <div class="footer-col  footer-col-3">
+    {% if site.categories %}
+    Categories<br/>
+      {% include category-list.html %}
+    {% endif %}
+    <br />
+    {% if site.tags %}
+    Tags<br/>
+      {% include tag-list.html %}
+    {% endif %}
+
+  </div>
 </div> <!-- footercolwrapper -->
 </div><!-- footer-main -->
 

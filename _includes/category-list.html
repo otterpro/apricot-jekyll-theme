@@ -1,8 +1,13 @@
   {% for cat in site.categories %}
-  <li>
+  <!-- 
+    <ul class="tag-list">
+  <li>-->
   <a href="{{site.url}}/categories/{{ cat[0] }}">
     {{ cat[0] }}
   </a>
+  <!--
   </li>
+    </ul>
+    -->
   {% endfor %}
 

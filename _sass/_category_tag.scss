@@ -1,6 +1,5 @@
  // Categories and tags
-a.category, a.tag
-{
+@mixin category_tag_common {
 	//font-family: $code-font-family;
     //font-size: $code-font-size;
     //border: 1px solid lightGray;
@@ -12,4 +11,14 @@ a.category, a.tag
     display: inline-block;
 	border-radius: 6px;  // rounded 
     background-color: $category-background-color;
+}
+a.category
+{
+	@include category_tag_common;
+    background-color: $category-background-color;
+}
+a.tag
+{
+	@include category_tag_common;
+    background-color: $tag-background-color;
 }
