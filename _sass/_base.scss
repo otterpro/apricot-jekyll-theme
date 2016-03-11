@@ -115,7 +115,9 @@ a {
     text-decoration: none;
 
     &:visited {
-        color: darken($brand-color, 15%);
+        //color: darken($brand-color, 15%);
+		//make the color same for all links.
+		//no need to change/darken color yet
     }
 
     &:hover {

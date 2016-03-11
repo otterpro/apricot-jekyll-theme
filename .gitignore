@@ -1,8 +1,10 @@
 _site
 _posts
+_tmp
 page
 .sass-cache
 img/*.jpg
 favicon.ico
 _secret.yml
 Gemfile.lock
+
