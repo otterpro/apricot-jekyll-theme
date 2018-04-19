@@ -114,9 +114,15 @@ Additional thanks to
 * [Jekyll category plugin](https://github.com/zroger/jekyll-categories)
 * [Font-Awesome-SVG-PNG](https://github.com/encharm/Font-Awesome-SVG-PNG)
 
-{% comment %}
+License and Copyright
+====================
+Apricot Theme for Jekyll is free software released under the [MIT License](http://www.opensource.org/licenses/MIT).  
+
+<!--
 TODO
 =======
+*  add 4th column in footer: "Favorite article", which shows tag "favorite" page
+
 Improve TOC style, example
 <http://idratherbewriting.com/documentation-theme-jekyll/mydoc/mydoc_yaml_tutorial.html>
 
@@ -154,4 +160,5 @@ Improve TOC style, example
 
 * Make better SASS media query (see http://davidwalsh.name/sass-media-query)
 
-{% endcomment %}
+The _____ logo was designed by David Jones. It is Copyright © 2014 Jerry D'Antonio. All Rights Reserved.
+-->

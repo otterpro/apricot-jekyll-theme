@@ -17,11 +17,16 @@ $background-color: #fdfdfd;
 // $background-color: #f00;
 $brand-color:      #2a7ae2;
 
-// category
-$category-background-color: gray;
-//$tag-background-color: $brand-color;
-$tag-background-color: lightgray;
+// tags and category
 $category-text-color: white;
+// OLD
+//$tag-background-color: $brand-color;
+// LIGHT
+// $category-background-color: gray;
+// $tag-background-color: lightgray;
+// DARK
+$tag-background-color: #AAA;
+$category-background-color: #888;
 
 // Code
 $code-font-family: monospace;

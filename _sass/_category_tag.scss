@@ -1,20 +1,30 @@
  // Categories and tags
 @mixin category_tag_common {
+	// orig
 	//font-family: $code-font-family;
     //font-size: $code-font-size;
-	font-size: .6em;
     //border: 1px solid lightGray;
     //border-radius: 3px;
 	//line-height: 1.5em;
-	letter-spacing: .05em;
 	//padding: 0px 4px;
-	padding: .3em .6em;
-	color: $category-text-color;
+
+	// rounded tag, looked ugly
+	//border-radius: 6px;  // rounded 
+	// padding: .1em .3em;
+	//margin-top: -9px;
+	//margin-bottom: 0;
+	//line-height: 1.5;
+
+	padding: 0 .3em;
+	font-size: .6em;
+	letter-spacing: .05em;
 	text-align: center;
     text-decoration: none;
 	text-transform: uppercase;
     display: inline-block;
-	border-radius: 6px;  // rounded 
+	//vertical-align: middle;
+	vertical-align: .3em;
+	color: $category-text-color;
     background-color: $category-background-color;
 }
 a.category
